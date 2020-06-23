@@ -35,7 +35,7 @@ tree.addRightNode(tree.root.right, 5)
 tree.addRightNode(tree.root.left, 5)
 
 
-//O(n) solution that does a dfs of the tree and checks every node and its children for unnique subtrees.
+//O(n) solution that does a dfs of the tree and checks every node and its children for unique subtrees.
 
 let count = 0
 
@@ -54,6 +54,8 @@ function dfs(node) {
 dfs(tree.root)
 
 function isUnival(node, value) {
+    //If the node is null, has no children, or has only children of matching values,
+    //then return true
     if (!node) {
         return true
     }
